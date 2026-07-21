@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="beyonce_texas.webp">
+  <title>Beyoncé</title>
+</head>
+
+<body>
+  <div id="player">
+    <img src="Halo.png" alt="Music Image" id="image" />
+    <br /><br />
+    <h2 id="title">Halo</h2>
+    <p id="artist">Beyoncé</p>
+    <a href="Beyoncé - Halo.html" id="copy"><button id="lyrics">Lyrics</button></a>
+    <audio id="song" src="Beyoncé - Halo (LYRICS)_256k.mp3" controls></audio>
+  </div>
+  <div id="navigator">
+    <button id="left" onclick="left()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-chevron-left">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <button id="right" onclick="right()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+  <div id="footer">
+    <p>&copy; 2026 Page Music Player</p>
+  </div>
+
+<script src="./Beyoncé .js"></script>
+</body>
+</html>

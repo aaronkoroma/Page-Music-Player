@@ -1,0 +1,209 @@
+        * {
+          margin: 0;
+          font-family: 'inter', sans-serif;
+        }
+
+        header {
+          background-color: #00bbff;
+          padding: 30px;
+          color: #fff;
+          font-weight: bold;
+          font-size: 30px;
+        }
+
+        h1 {
+          margin-top: 30px;
+          margin-left: 40px;
+          margin-bottom: 50px;
+          font-size: 25px;
+        }
+
+        header,
+        h1 {
+          letter-spacing: 2px;
+        }
+
+        .list {
+          width: 100%;
+          margin-bottom: 100px;
+        }
+
+        .list ul {
+          gap: 20px;
+          display: flex;
+          flex-direction: column;
+          list-style-type: none;
+          margin: 0px;
+          width: 93%;
+        }
+
+        .list ul a li {
+          background-color: #ddd;
+          padding: 50px;
+          font-size: 30px;
+        }
+
+        .list ul a li b {
+          margin-left: 20px;
+        }
+
+        .list ul a {
+          text-decoration: none;
+          color: #000;
+        }
+
+        .list ul a li img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        hr {
+          width: 96%;
+          margin-left: 2%;
+          margin-right: 2%;
+          border: 1.5px solid #ddd;
+          margin-bottom: 120px;
+        }
+
+        footer {
+          padding: 25px;
+          background-color: #00bbff;
+          color: #fff;
+          text-align: center;
+          font-weight: bold;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+        }
+
+        #player {
+          background-color: #ddd;
+          padding: 10px;
+          width: 300px;
+          height: 500px;
+          margin: auto;
+          margin-top: 50px;
+          border-radius: 20px;
+        }
+
+        #image {
+          border-radius: 50%;
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          margin-top: 30px;
+        }
+
+        #title,
+        #artist {
+          text-align: center;
+          color: #000;
+        }
+
+        #lyrics {
+          padding: 15px;
+          background-color: #eee;
+          border: none;
+          border-radius: 50px;
+          color: #000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          width: 60%;
+          margin-top: 40px;
+          cursor: pointer;
+        }
+
+        #lyrics:hover {
+          background-color: #00bbff;
+          color: #fff;
+        }
+
+        audio {
+          margin-top: 50px;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        a:hover {
+          text-decoration: none;
+        }
+
+        #navigator #left {
+          left: 0;
+          margin-left: 20px;
+        }
+
+        #navigator #right {
+          right: 0;
+          margin-right: 20px;
+        }
+
+        #navigator #right,
+        #left {
+          cursor: pointer;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: none;
+          position: fixed;
+          bottom: 0;
+          margin-bottom: 30rem;
+        }
+
+        #navigator #right:hover,
+        #left:hover {
+          background-color: #00bbff;
+          color: #fff;
+        }
+
+        #footer p {
+          margin-top: 20px;
+          text-align: center;
+          font-size: 12px;
+          color: #bbb;
+        }
+
+        @media (max-width: 600px) {
+          header {
+            font-size: 25px;
+          }
+
+          h1 {
+            font-size: 21px;
+          }
+
+          .list ul {
+            width: 82%;
+            gap: 30px;
+          }
+
+          .list ul a li {
+            font-size: 21px;
+            padding: 20px;
+            height: 70px;
+          }
+
+          .list ul a li img {
+            width: 30px;
+            height: 30px;
+          }
+
+          #navigator #left {
+            margin-left: 37px;
+          }
+
+          #navigator #right {
+            margin-right: 37px;
+          }
+        }
