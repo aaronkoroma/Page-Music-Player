@@ -130,7 +130,8 @@
           margin-top: 50px;
           background-color: #f4f4f4;
           padding:10px;
-          width: 96%;
+          width: 94%;
+          border-radius: 50px;
         }
 
         a {
