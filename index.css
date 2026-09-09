@@ -1,74 +1,71 @@
-/* ==========================================================================
-   1. Reset & Global Styles
-   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: 'Inter', sans-serif;
 }
 
-body {
-  background-color: #fff;
-  color: #111;
-  padding-bottom: 100px; /* Space for fixed footer */
-}
-
-/* ==========================================================================
-   2. Typography & Layout Headers
-   ========================================================================== */
 header {
-  padding: 40px 40px 20px 40px;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #888;
-  font-weight: 600;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 24px 40px;
+  color: #111;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 h1 {
-  padding: 0 40px;
+  margin-top: 40px;
+  margin-left: 40px;
   margin-bottom: 30px;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
-  letter-spacing: -0.5px;
+  color: #111;
 }
 
-/* ==========================================================================
-   3. Artist List (Minimalist Layout)
-   ========================================================================== */
+header,
+h1 {
+  letter-spacing: 0.5px;
+}
+
 .list {
   width: 100%;
-  padding: 0 40px;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 .list ul {
+  gap: 12px;
   display: flex;
   flex-direction: column;
   list-style-type: none;
-}
-
-/* Changed selector structure to match your original HTML sequence: ul -> a -> li */
-.list ul a {
-  text-decoration: none;
-  color: #111;
-  border-bottom: 1px solid #eee; /* Clean divider line instead of thick gray background boxes */
+  margin: 0 auto;
+  width: 93%;
 }
 
 .list ul a li {
+  background-color: #f9f9f9;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  padding: 24px 32px;
+  font-size: 18px;
   display: flex;
   align-items: center;
-  padding: 20px 0;
-  font-size: 18px;
-  font-weight: 500;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .list ul a:hover li {
-  opacity: 0.7;
-  transform: translateX(4px); /* Subtle nudge interactive animation */
+  background-color: #f1f1f1;
+  transform: translateY(-1px);
+}
+
+.list ul a li b {
+  margin-left: 16px;
+  font-weight: 500;
+}
+
+.list ul a {
+  text-decoration: none;
+  color: #111;
 }
 
 .list ul a li img {
@@ -76,60 +73,79 @@ h1 {
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 20px;
-  background-color: #f5f5f5;
 }
 
-/* ==========================================================================
-   4. Audio Player Page Dashboard
-   ========================================================================== */
-#player {
-  max-width: 360px;
-  margin: 60px auto;
-  padding: 0 20px;
+hr {
+  width: 93%;
+  margin: 0 auto 140px auto;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+footer {
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #f0f0f0;
+  color: #666;
   text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#player {
+  background-color: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  padding: 24px;
+  width: 320px;
+  height: auto;
+  margin: 60px auto;
+  border-radius: 24px;
 }
 
 #image {
-  width: 240px;
-  height: 240px;
-  border-radius: 24px; /* Soft modern square shape instead of standard circle */
+  border-radius: 16px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
-  margin: 0 auto 30px auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06); /* Ultra soft drop shadow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px auto 24px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 #title {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 6px;
+  text-align: center;
+  color: #111;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
 }
 
 #artist {
-  font-size: 15px;
+  text-align: center;
   color: #666;
+  font-size: 14px;
   font-weight: 400;
-  margin-bottom: 30px;
-}
-
-audio {
-  width: 100%;
-  outline: none;
-  margin-top: 10px;
 }
 
 #lyrics {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 35px;
-  padding: 12px 30px;
+  padding: 12px 24px;
   background-color: #f5f5f5;
-  color: #111;
-  font-size: 14px;
-  font-weight: 600;
   border: none;
   border-radius: 100px;
+  color: #111;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px auto 12px auto;
+  width: 80%;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
@@ -139,93 +155,95 @@ audio {
   color: #fff;
 }
 
-/* ==========================================================================
-   5. Navigation Overlays
-   ========================================================================== */
-#navigator #left, 
+audio {
+  margin-top: 24px;
+  background-color: #f5f5f5;
+  padding: 4px;
+  width: 100%;
+  border-radius: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#navigator #left {
+  left: 0;
+  margin-left: 40px;
+}
+
 #navigator #right {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
+  right: 0;
+  margin-right: 40px;
+}
+
+#navigator #right,
+#left {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
   background-color: #fff;
   border: 1px solid #eee;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: fixed;
+  bottom: 50%;
+  transform: translateY(50%);
   transition: all 0.2s ease;
 }
 
-#navigator #left { left: 30px; }
-#navigator #right { right: 30px; }
-
-#navigator #left:hover, 
-#navigator #right:hover {
+#navigator #right:hover,
+#left:hover {
   background-color: #111;
   color: #fff;
   border-color: #111;
 }
 
-/* ==========================================================================
-   6. Structs & Structural Footers
-   ========================================================================== */
-hr {
-  display: none; /* Removed heavy divider lines for a cleaner white-space look */
-}
-
-center {
-  margin: 40px 0;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 24px;
-  background-color: rgba(255, 255, 255, 0.90);
-  backdrop-filter: blur(10px); /* Premium translucent blurred glass footer overlay */
-  border-top: 1px solid #eee;
-  color: #666;
-  font-size: 12px;
-  text-align: center;
-  font-weight: 500;
-}
-
 #footer p {
-  margin-top: 8px;
+  margin-top: 16px;
+  text-align: center;
   font-size: 11px;
   color: #aaa;
 }
 
-/* ==========================================================================
-   7. Media Queries (Mobile Breakpoints)
-   ========================================================================== */
 @media (max-width: 600px) {
   header {
-    padding: 30px 24px 10px 24px;
+    font-size: 18px;
+    padding: 20px 24px;
   }
 
   h1 {
-    padding: 0 24px;
-    font-size: 26px;
+    font-size: 22px;
+    margin-left: 24px;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 
-  .list {
-    padding: 0 24px;
+  .list ul {
+    width: 90%;
+    gap: 10px;
   }
 
   .list ul a li {
     font-size: 16px;
-    padding: 16px 0;
+    padding: 16px 20px;
   }
 
-  #navigator #left, 
+  .list ul a li img {
+    width: 40px;
+    height: 40px;
+  }
+
+  #navigator #left {
+    margin-left: 16px;
+  }
+
   #navigator #right {
-    display: none; /* Hides intrusive side arrows on small viewports for better touch layouts */
+    margin-right: 16px;
   }
 }
