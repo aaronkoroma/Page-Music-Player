@@ -151,7 +151,7 @@ footer {
 }
 
 #lyrics:hover {
-  background-color: #111;
+  background-color: #00bbff;
   color: #fff;
 }
 
@@ -199,7 +199,7 @@ a:hover {
 
 #navigator #right:hover,
 #left:hover {
-  background-color: #111;
+  background-color: #00bbff;
   color: #fff;
   border-color: #111;
 }
