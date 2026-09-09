@@ -1,213 +1,231 @@
-        * {
-          margin: 0;
-          font-family: 'inter', sans-serif;
-        }
+/* ==========================================================================
+   1. Reset & Global Styles
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
 
-        header {
-          background-color: #00bbff;
-          padding: 30px;
-          color: #fff;
-          font-weight: bold;
-          font-size: 30px;
-        }
+body {
+  background-color: #fff;
+  color: #111;
+  padding-bottom: 100px; /* Space for fixed footer */
+}
 
-        h1 {
-          margin-top: 30px;
-          margin-left: 40px;
-          margin-bottom: 50px;
-          font-size: 25px;
-        }
+/* ==========================================================================
+   2. Typography & Layout Headers
+   ========================================================================== */
+header {
+  padding: 40px 40px 20px 40px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #888;
+  font-weight: 600;
+}
 
-        header,
-        h1 {
-          letter-spacing: 2px;
-        }
+h1 {
+  padding: 0 40px;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
 
-        .list {
-          width: 100%;
-          margin-bottom: 100px;
-        }
+/* ==========================================================================
+   3. Artist List (Minimalist Layout)
+   ========================================================================== */
+.list {
+  width: 100%;
+  padding: 0 40px;
+  margin-bottom: 60px;
+}
 
-        .list ul {
-          gap: 20px;
-          display: flex;
-          flex-direction: column;
-          list-style-type: none;
-          margin: 0px;
-          width: 93%;
-        }
+.list ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
 
-        .list ul a li {
-          background-color: #ddd;
-          padding: 50px;
-          font-size: 30px;
-        }
+/* Changed selector structure to match your original HTML sequence: ul -> a -> li */
+.list ul a {
+  text-decoration: none;
+  color: #111;
+  border-bottom: 1px solid #eee; /* Clean divider line instead of thick gray background boxes */
+}
 
-        .list ul a li b {
-          margin-left: 20px;
-        }
+.list ul a li {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  font-size: 18px;
+  font-weight: 500;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
 
-        .list ul a {
-          text-decoration: none;
-          color: #000;
-        }
+.list ul a:hover li {
+  opacity: 0.7;
+  transform: translateX(4px); /* Subtle nudge interactive animation */
+}
 
-        .list ul a li img {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          object-fit: cover;
-        }
+.list ul a li img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  background-color: #f5f5f5;
+}
 
-        hr {
-          width: 96%;
-          margin-left: 2%;
-          margin-right: 2%;
-          border: 1px solid #ddd;
-          margin-bottom: 120px;
-        }
+/* ==========================================================================
+   4. Audio Player Page Dashboard
+   ========================================================================== */
+#player {
+  max-width: 360px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
 
-        footer {
-          padding: 25px;
-          background-color: #00bbff;
-          color: #fff;
-          text-align: center;
-          font-weight: bold;
-          position: fixed;
-          bottom: 0;
-          width: 100%;
-        }
+#image {
+  width: 240px;
+  height: 240px;
+  border-radius: 24px; /* Soft modern square shape instead of standard circle */
+  object-fit: cover;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06); /* Ultra soft drop shadow */
+}
 
-        #player {
-          background-color: #ddd;
-          padding: 10px;
-          width: 300px;
-          height: 500px;
-          margin: auto;
-          margin-top: 50px;
-          border-radius: 20px;
-        }
+#title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
 
-        #image {
-          border-radius: 50%;
-          width: 150px;
-          height: 150px;
-          object-fit: cover;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: auto;
-          margin-top: 30px;
-        }
+#artist {
+  font-size: 15px;
+  color: #666;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
 
-        #title,
-        #artist {
-          text-align: center;
-          color: #000;
-        }
+audio {
+  width: 100%;
+  outline: none;
+  margin-top: 10px;
+}
 
-        #lyrics {
-          padding: 15px;
-          background-color: #eee;
-          border: none;
-          border-radius: 50px;
-          color: #000;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: auto;
-          width: 60%;
-          margin-top: 40px;
-          cursor: pointer;
-        }
+#lyrics {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+  padding: 12px 30px;
+  background-color: #f5f5f5;
+  color: #111;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
 
-        #lyrics:hover {
-          background-color: #00bbff;
-          color: #fff;
-        }
+#lyrics:hover {
+  background-color: #111;
+  color: #fff;
+}
 
-        audio {
-          margin-top: 50px;
-          background-color: #ddd;
-          padding:10px;
-          width: 94%;
-          border-radius: 50px;
-        }
+/* ==========================================================================
+   5. Navigation Overlays
+   ========================================================================== */
+#navigator #left, 
+#navigator #right {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
 
-        a {
-          text-decoration: none;
-        }
+#navigator #left { left: 30px; }
+#navigator #right { right: 30px; }
 
-        a:hover {
-          text-decoration: none;
-        }
+#navigator #left:hover, 
+#navigator #right:hover {
+  background-color: #111;
+  color: #fff;
+  border-color: #111;
+}
 
-        #navigator #left {
-          left: 0;
-          margin-left: 20px;
-        }
+/* ==========================================================================
+   6. Structs & Structural Footers
+   ========================================================================== */
+hr {
+  display: none; /* Removed heavy divider lines for a cleaner white-space look */
+}
 
-        #navigator #right {
-          right: 0;
-          margin-right: 20px;
-        }
+center {
+  margin: 40px 0;
+}
 
-        #navigator #right,
-        #left {
-          cursor: pointer;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          object-fit: cover;
-          border: none;
-          position: fixed;
-          bottom: 0;
-          margin-bottom: 30rem;
-        }
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+  background-color: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(10px); /* Premium translucent blurred glass footer overlay */
+  border-top: 1px solid #eee;
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500;
+}
 
-        #navigator #right:hover,
-        #left:hover {
-          background-color: #00bbff;
-          color: #fff;
-        }
+#footer p {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #aaa;
+}
 
-        #footer p {
-          margin-top: 20px;
-          text-align: center;
-          font-size: 12px;
-          color: #bbb;
-        }
+/* ==========================================================================
+   7. Media Queries (Mobile Breakpoints)
+   ========================================================================== */
+@media (max-width: 600px) {
+  header {
+    padding: 30px 24px 10px 24px;
+  }
 
-        @media (max-width: 600px) {
-          header {
-            font-size: 25px;
-          }
+  h1 {
+    padding: 0 24px;
+    font-size: 26px;
+  }
 
-          h1 {
-            font-size: 21px;
-          }
+  .list {
+    padding: 0 24px;
+  }
 
-          .list ul {
-            width: 82%;
-            gap: 30px;
-          }
+  .list ul a li {
+    font-size: 16px;
+    padding: 16px 0;
+  }
 
-          .list ul a li {
-            font-size: 21px;
-            padding: 20px;
-            height: 70px;
-          }
-
-          .list ul a li img {
-            width: 30px;
-            height: 30px;
-          }
-
-          #navigator #left {
-            margin-left: 37px;
-          }
-
-          #navigator #right {
-            margin-right: 37px;
-          }
-        }
+  #navigator #left, 
+  #navigator #right {
+    display: none; /* Hides intrusive side arrows on small viewports for better touch layouts */
+  }
+}
